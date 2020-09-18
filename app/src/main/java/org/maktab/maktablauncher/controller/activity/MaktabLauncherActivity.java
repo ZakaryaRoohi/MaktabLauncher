@@ -10,4 +10,8 @@ public class MaktabLauncherActivity extends SingleFragmentActivity {
     public Fragment createFragment() {
         return MaktabLauncherFragment.newInstance();
     }
+
+    @Override
+    public void onBackPressed() {
+    }
 }
