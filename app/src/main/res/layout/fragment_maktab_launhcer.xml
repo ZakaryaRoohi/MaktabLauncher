@@ -1,10 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.recyclerview.widget.RecyclerView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/recycler_view_maktab_launcher"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".controller.fragment.MaktabLauncherFragment">
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_height="50dp">
+        <Button
+            android:id="@+id/asc_sort_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:text="Asc  by name"/>
+        <Button
+            android:id="@+id/dsc_sort_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
 
-</androidx.recyclerview.widget.RecyclerView>
+            android:text="DSC  by name"/>
+        <Button
+            android:id="@+id/asc_sort_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:textSize="10sp"
+            android:text="ASC by install date"/>
+
+        <Button
+            android:id="@+id/dsc_sort_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"
+
+            android:text="DSC by install date"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/recycler_view_maktab_launcher"
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".controller.fragment.MaktabLauncherFragment">
+
+    </androidx.recyclerview.widget.RecyclerView>
+</LinearLayout>

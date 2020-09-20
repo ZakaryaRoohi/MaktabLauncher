@@ -1,10 +1,14 @@
 package org.maktab.maktablauncher.utils;
 
+import android.app.Activity;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.os.Build;
+
+import androidx.annotation.RequiresApi;
 
 import java.util.List;
 
@@ -16,6 +20,7 @@ public class PackageUtils {
 
         List<ResolveInfo> activities =
                 packageManager.queryIntentActivities(launcherActivityIntent, 0);
+
 
         return activities;
     }
@@ -33,4 +38,5 @@ public class PackageUtils {
 
         return new ComponentName(packageName, activityName);
     }
+
 }
